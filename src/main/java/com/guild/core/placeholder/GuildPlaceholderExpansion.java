@@ -135,9 +135,9 @@ public class GuildPlaceholderExpansion extends PlaceholderExpansion {
     private String getGuildName(Player player) {
         try {
             Guild guild = guildService.getPlayerGuild(player.getUniqueId());
-            return guild != null ? guild.getName() : "-";
+            return guild != null ? guild.getName() : "无工会";
         } catch (Exception e) {
-            return "-";
+            return "无工会";
         }
     }
     
@@ -210,9 +210,9 @@ public class GuildPlaceholderExpansion extends PlaceholderExpansion {
     private String getGuildFrozenStatus(Player player) {
         try {
             Guild guild = guildService.getPlayerGuild(player.getUniqueId());
-            return guild != null ? (guild.isFrozen() ? "True" : "False") : "-";
+            return guild != null ? (guild.isFrozen() ? "True" : "False") : "无工会";
         } catch (Exception e) {
-            return "-";
+            return "无工会";
         }
     }
     
